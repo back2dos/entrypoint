@@ -1,0 +1,3 @@
+-lib entrypoint
+-cp tests
+-main RunTests

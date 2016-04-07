@@ -1,0 +1,16 @@
+language: haxe
+
+haxe:
+  - "3.2.1"
+  - development
+  
+matrix:
+  allow_failures:
+    - haxe: development
+    
+install:
+  - haxelib dev entrypoint .
+
+script:
+  - haxe tests.hxml -js tests.js && node tests.js
+  - haxe tests.hxml -D manual -js tests.js && node tests.js
